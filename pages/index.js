@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Box from '../src/components/box'
+import MainGrid from '../src/components/main-grid'
 
 const Title = styled.h1`
   font-size: 50px;
@@ -6,5 +8,17 @@ const Title = styled.h1`
 `
 
 export default function Home() {
-  return <Title>My page</Title>
+  return (
+    <MainGrid>
+      <Box style={{ gridArea: 'profileArea' }}>
+        Image
+      </Box>
+      <Box style={{ gridArea: 'welcomeArea' }}>
+        Bem Vindo
+      </Box>
+      <Box style={{ gridArea: 'profileRelation' }}>
+        Comunidades
+      </Box>
+    </MainGrid>
+  )
 }
